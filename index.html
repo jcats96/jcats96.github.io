@@ -26,6 +26,17 @@
     <script>
       var canvas = document.querySelector("#unity-canvas");
 
+      function resizeCanvas() {
+        var aspectRatio = canvas.width / canvas.height;
+        var newWidth = window.innerWidth * 0.8;
+        var newHeight = newWidth / aspectRatio;
+        canvas.style.width = newWidth + "px";
+        canvas.style.height = newHeight + "px";
+      }
+
+      window.addEventListener('resize', resizeCanvas);
+      resizeCanvas();
+
       // Shows a temporary message banner/ribbon for a few seconds, or
       // a permanent error message on top of the canvas if type=='error'.
       // If type=='warning', a yellow highlight color is used.
@@ -98,8 +109,7 @@
 
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-        canvas.style.width = "300px";
-        canvas.style.height = "200px";
+        resizeCanvas();
       }
 
       document.querySelector("#unity-loading-bar").style.display = "block";
