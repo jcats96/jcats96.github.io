@@ -41,8 +41,8 @@
       var canvas = document.querySelector("#unity-canvas");
 
       function resizeCanvas() {
-        var baseWidth = 300;
-        var baseHeight = 200;
+        var baseWidth = 450;
+        var baseHeight = 300;
         var scaleFactor = Math.min(Math.floor(window.innerWidth / baseWidth), Math.floor(window.innerHeight / baseHeight));
         scaleFactor = Math.max(1, Math.min(scaleFactor, 3)); // Ensure scale factor is between 1 and 3
         var newWidth = baseWidth * scaleFactor;
