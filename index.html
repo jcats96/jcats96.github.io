@@ -6,10 +6,15 @@
     <title>Unity Web Player | egg game</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barriecito&display=swap">
     <style>
       #unity-canvas {
         image-rendering: pixelated;
         image-rendering: crisp-edges;
+      }
+      #game-title {
+        text-align: center;
+        font-family: 'Barriecito', cursive;
       }
     </style>
   </head>
@@ -54,7 +59,7 @@
         var hString = "h".repeat(hCount);
         var hCount2 = Math.floor(Math.random() * 5) + 1;
         var hString2 = "h".repeat(hCount2);
-        titleElement.textContent ="Jen Katz Multidisciplin"+ "U" + hString + " Art"+"u"+hString2 +"I make computer do things";
+        titleElement.textContent ="Jen Katz Multidisciplin"+ "U" + hString + " Art"+"u"+hString2 +" I make computer do things";
       }
 
       generateGameTitle();
