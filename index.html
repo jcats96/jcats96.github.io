@@ -6,6 +6,12 @@
     <title>Unity Web Player | egg game</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+    <style>
+      #unity-canvas {
+        image-rendering: pixelated;
+        image-rendering: crisp-edges;
+      }
+    </style>
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
@@ -74,9 +80,10 @@
         codeUrl: buildUrl + "/jcats96.github.io.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
-        productName: "egg game",
+        productName: "egg is cold",
         productVersion: "0.1.0",
         showBanner: unityShowBanner,
+        devicePixelRatio: 1 // Force low DPI rendering
       };
 
       // By default, Unity keeps WebGL canvas render target size matched with
