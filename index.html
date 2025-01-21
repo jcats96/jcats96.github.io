@@ -53,15 +53,15 @@
         var baseWidth = 450;
         var baseHeight = 300;
         var scaleFactor = Math.min(Math.floor(window.innerWidth / baseWidth), Math.floor(window.innerHeight / baseHeight));
-        scaleFactor = Math.max(1, Math.min(scaleFactor, 3)); // Ensure scale factor is between 1 and 3
+        scaleFactor = Math.max(1, Math.min(scaleFactor, 2)); // Ensure scale factor is between 1 and 3
         var newWidth = baseWidth * scaleFactor;
         var newHeight = baseHeight * scaleFactor;
         canvas.style.width = newWidth + "px";
         canvas.style.height = newHeight + "px";
       }
 
-      // window.addEventListener('resize', resizeCanvas);
-      // resizeCanvas();
+      window.addEventListener('resize', resizeCanvas);
+      resizeCanvas();
 
       // Generate the text for the game title
       function generateGameTitle() {
