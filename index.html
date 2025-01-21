@@ -11,30 +11,39 @@
       #unity-canvas {
         image-rendering: pixelated;
         image-rendering: crisp-edges;
+        display: block;
+        margin: 0 auto;
       }
-      #game-title {
+      #game-title, .additional-text {
         text-align: center;
         font-family: 'Barriecito', cursive;
+      }
+      #content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
     </style>
   </head>
   <body>
-    <h1 id="game-title"></h1>
-    <p style="text-align: center; font-family: 'Barriecito', cursive;">and i make music too</p>
-    <p style="text-align: center; font-family: 'Barriecito', cursive;">bool lookingForWork = <strong>True</strong>; </p>
-    <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=300 height=200 tabindex="-1"></canvas>
-      <div id="unity-loading-bar">
-        <div id="unity-logo"></div>
-        <div id="unity-progress-bar-empty">
-          <div id="unity-progress-bar-full"></div>
+    <div id="content">
+      <h1 id="game-title"></h1>
+      <p class="additional-text">and i make music too</p>
+      <p class="additional-text">bool lookingForWork = <strong>True</strong>;</p>
+      <div id="unity-container" class="unity-desktop">
+        <canvas id="unity-canvas" width=450 height=300 tabindex="-1"></canvas>
+        <div id="unity-loading-bar">
+          <div id="unity-logo"></div>
+          <div id="unity-progress-bar-empty">
+            <div id="unity-progress-bar-full"></div>
+          </div>
         </div>
-      </div>
-      <div id="unity-warning"> </div>
-      <div id="unity-footer">
-        <div id="unity-logo-title-footer"></div>
-        <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">egg game</div>
+        <div id="unity-warning"> </div>
+        <div id="unity-footer">
+          <div id="unity-logo-title-footer"></div>
+          <div id="unity-fullscreen-button"></div>
+          <div id="unity-build-title">egg game</div>
+        </div>
       </div>
     </div>
     <script>
@@ -51,8 +60,8 @@
         canvas.style.height = newHeight + "px";
       }
 
-      window.addEventListener('resize', resizeCanvas);
-      resizeCanvas();
+      // window.addEventListener('resize', resizeCanvas);
+      // resizeCanvas();
 
       // Generate the text for the game title
       function generateGameTitle() {
