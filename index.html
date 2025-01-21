@@ -90,14 +90,15 @@
         }
         updateBannerVisibility();
       }
-
+      // this is so unity can build to a folder named new, to not overwrite the index.html
+      var build_prefix = "new";
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/jcats96.github.io.loader.js";
+      var loaderUrl = buildUrl + "/" + build_prefix + ".loader.js";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/jcats96.github.io.data",
-        frameworkUrl: buildUrl + "/jcats96.github.io.framework.js",
-        codeUrl: buildUrl + "/jcats96.github.io.wasm",
+        dataUrl: buildUrl + "/" + build_prefix + ".data",
+        frameworkUrl: buildUrl + "/" + build_prefix +".framework.js",
+        codeUrl: buildUrl + "/" + build_prefix + "wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "egg is cold",
