@@ -23,6 +23,9 @@
         flex-direction: column;
         align-items: center;
       }
+      #unity-container {
+        margin-top: 20px;
+      }
     </style>
   </head>
   <body>
@@ -30,20 +33,21 @@
       <h1 id="game-title"></h1>
       <p class="additional-text">and i make music too</p>
       <p class="additional-text">bool lookingForWork = <strong>True</strong>;</p>
+      <div style="height: 20px;"></div> <!-- Added space between text and game -->
       <div id="unity-container" class="unity-desktop">
-        <canvas id="unity-canvas" width=450 height=300 tabindex="-1"></canvas>
-        <div id="unity-loading-bar">
-          <div id="unity-logo"></div>
-          <div id="unity-progress-bar-empty">
-            <div id="unity-progress-bar-full"></div>
-          </div>
+      <canvas id="unity-canvas" width=450 height=300 tabindex="-1"></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+        <div id="unity-progress-bar-full"></div>
         </div>
-        <div id="unity-warning"> </div>
-        <div id="unity-footer">
-          <div id="unity-logo-title-footer"></div>
-          <div id="unity-fullscreen-button"></div>
-          <div id="unity-build-title">egg game</div>
-        </div>
+      </div>
+      <div id="unity-warning"> </div>
+      <div id="unity-footer">
+        <div id="unity-logo-title-footer"></div>
+        <div id="unity-fullscreen-button"></div>
+        <div id="unity-build-title">egg game</div>
+      </div>
       </div>
     </div>
     <script>
@@ -53,7 +57,7 @@
         var baseWidth = 450;
         var baseHeight = 300;
         var scaleFactor = Math.min(Math.floor(window.innerWidth / baseWidth), Math.floor(window.innerHeight / baseHeight));
-        scaleFactor = Math.max(1, Math.min(scaleFactor, 2)); // Ensure scale factor is between 1 and 3
+        scaleFactor = Math.max(1, Math.min(scaleFactor, 2)); // Ensure scale factor is between 1 and 2
         var newWidth = baseWidth * scaleFactor;
         var newHeight = baseHeight * scaleFactor;
         canvas.style.width = newWidth + "px";
